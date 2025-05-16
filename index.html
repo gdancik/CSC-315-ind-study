@@ -1,0 +1,34 @@
+---  
+layout: main 
+title: Home
+exclude_from_nav: true
+---
+
+{% capture notes %}
+<a href = "{{ site.baseurl }}/notes/">Notes</a> 
+{% endcapture %}
+
+{% capture exams %}
+<a href = "{{ site.baseurl }}/exams/">Exams</a> 
+{% endcapture %}
+
+{% capture hw %}
+<a href = "{{ site.baseurl }}/assignments/">Assignments</a> 
+{% endcapture %}
+
+<p><b>8/20/2023</b>: Welcome to <b style = "color: red"> Genomic Data Analysis </b>. This page will be used to provide course material for an independent study in CSC-315. See the links above for more information. Additional information, including due dates, will be provided through Blackboard and e-mail. </p>
+
+
+    <script>
+    var dt = new Date()
+
+    var dd = dt.getDate()
+    if (dd < 10) {
+        dd = '0'+dd
+    }
+    var d = dt.getMonth() + 1 + '/' + dd + '/' + dt.getFullYear()
+    var x = document.getElementsByClassName('today')[0]
+if (x.innerHTML.includes('<b>'+d+'</b>')) {
+        x.style.backgroundColor = 'yellow';
+    }
+    </script>

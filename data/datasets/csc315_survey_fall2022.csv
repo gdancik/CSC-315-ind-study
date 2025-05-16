@@ -1,0 +1,16 @@
+﻿HS GPA,College GPA,CatOrDogPerson,Alcohol,FavoriteMeal,Sleep,FavoriteMovieGenre,LightOrDark,FavoriteTechCompany,FavoriteSport,FavoriteIDE,FavoriteSeason,LadyOrWitch
+3.5,3.4,Dog,0,Breakfast,8,Action,Dark mode,Apple,Basketball,Eclipse,Fall,An old lady
+4,3.7,Cat,0,Breakfast,7,Fantasy,Dark mode,Microsoft,Basketball,Visual Studio or VS Code,Spring,None of the above (or both)
+3.8,3.9,Dog,2,Dinner,8,Fantasy,Light mode,Thermo Fisher Scientific,Archery,Other or I do not have a favorite,Fall,None of the above (or both)
+4.1,3.65,Dog,2,I do not have a favorite or none of the above,5,Action,No preference,Apple,Hockey,Other or I do not have a favorite,Summer,An old lady
+3,3.56,Cat,3,Dinner,7,Fantasy,Dark mode,Microsoft,Hockey,IntelliJ IDEA,Fall,An old lady
+3.45,3.25,Dog,0,Dinner,5,Thriller/Horror,Dark mode,AMD,Tennis,Visual Studio or VS Code,Fall,None of the above (or both)
+2.1,3.35,Dog,0,I do not have a favorite or none of the above,5,<Unanswered>,No preference,apple,basketball,IntelliJ IDEA,Fall,An old lady
+3.6,3.5,Cat,0,Dinner,6,Thriller/Horror,Dark mode,None,Football,Visual Studio or VS Code,Spring,A witch
+3.34,3.74,Dog,3,Dinner,7,Comedy,Dark mode,samsung,soccer,Visual Studio or VS Code,Summer,None of the above (or both)
+3.5,3.89,Dog,0,Dinner,6.5,Action,Dark mode,Google,None,Other or I do not have a favorite,Fall,None of the above (or both)
+2.5,3.2,Dog,0,I do not have a favorite or none of the above,6,Comedy,No preference,Google,Basketball,Other or I do not have a favorite,Summer,An old lady
+3.3,3.1,Dog,3,Dinner,8,Thriller/Horror,Dark mode,Tesla,Soccer,Visual Studio or VS Code,Summer,An old lady
+3.4,3.6,Dog,1,Lunch,8,Action,Dark mode,Tesla,Track,Visual Studio or VS Code,Fall,An old lady
+3.6,3,Dog,1,Breakfast,7,Action,Dark mode,Framework,Swimming,IntelliJ IDEA,Fall,None of the above (or both)
+3.5,3.8,Dog,1,Breakfast,7,Thriller/Horror,Dark mode,Apple,American Football,Eclipse,Fall,An old lady
