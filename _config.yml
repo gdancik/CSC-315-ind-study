@@ -8,8 +8,8 @@
 # Site settings
 title: Home 
 # the base hostname & protocol for your site
-url: "http://gdancik.github.io/CSC-315" 
-baseurl: "/CSC-315"
+url: "http://gdancik.github.io/CSC-315-ind-study" 
+baseurl: "/CSC-315-ind-study"
 # Build settings
 markdown: kramdown
 timezone: America/New_York
