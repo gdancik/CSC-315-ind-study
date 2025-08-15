@@ -33,6 +33,11 @@ cli_query = blca %>%
 # prepare (load) the data into R
 blca_pheno <- XenaPrepare(cli_query)
 
+######################################################## 
+# if blca_pheno is a list, run the following:
+# blca_pheno <- blca_pheno$TCGA.BLCA.clinical.tsv.gz 
+########################################################
+
 # Get the RNA-seq data, including the "probe map"
 cli_query <- blca %>% filter(Label == 'HTSeq - Counts') %>%
   XenaGenerate() %>%  # generate a XenaHub object
@@ -62,22 +67,21 @@ Y <- blca_pheno
 # 'change '.' to '-' so sample ID format is consistent
 colnames(X) <- gsub('\\.', '-', colnames(X))
 
-
 # keep tumor samples ending in 01A
 g <- grep('01A$', colnames(X))
 X <- X[,g]
 
 
 # match expression to clinical data
-common_samples <- intersect(colnames(X), Y$submitter_id.samples)
+common_samples <- intersect(colnames(X), Y$sample)
 mx <- match(common_samples, colnames(X))
-my <- match(common_samples, Y$submitter_id.samples)
+my <- match(common_samples, Y$sample)
 
 X <- X[,mx]
 Y <- Y[my,]
 
 # Make sure that the samples match -- if they don't, this will produce an error
-stopifnot(all(colnames(X) == Y$submitter_id.samples))
+stopifnot(all(colnames(X) == Y$sample))
 
 
 #################################

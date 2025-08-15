@@ -79,6 +79,19 @@ cli_query = blca %>%
 #      using the query table
 blca_pheno <- XenaPrepare(cli_query)
 
+#######################################################
+# Note: Because of updates to GDC, there may
+# be two blca_pheno datasets. Per documentation,
+# the previous release will no longer be available
+# after October 25. 
+
+# If the object 'blca_pheno' is a list, it contains
+# both releases and 'blca_pheno$TCGA.BLCA.clinical.tsv.gz'
+# should be used.
+
+# If 'blca_pheno' is a data frame, it can be used as is
+#######################################################
+
 # Questions -- 
 #     1. How many patients (rows) do we have data for?
 

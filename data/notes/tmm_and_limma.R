@@ -40,6 +40,25 @@ cli_query = blca %>%
 # prepare (load) the data into R
 blca_pheno <- XenaPrepare(cli_query)
 
+
+#######################################################
+# Note: Because of updates to GDC, there may
+# be two blca_pheno datasets. Per documentation,
+# the previous release will no longer be available
+# after October 25. 
+
+# If the object 'blca_pheno' is a list, it contains
+# both releases and 'blca_pheno$TCGA.BLCA.clinical.tsv.gz'
+# should be used. Run the code:
+
+# blca_pheno <- blca_pheno$TCGA.BLCA.clinical.tsv.gz
+
+# If 'blca_pheno' is a data frame, it can be used as is
+
+# Note that the new blca_pheno data stores sample IDs
+# in blca_pheno$sample
+#######################################################
+
 # Get the RNA-seq data, including the "probe map"
 cli_query <- blca %>% filter(Label == 'HTSeq - Counts') %>%
   XenaGenerate() %>%  # generate a XenaHub object
@@ -82,7 +101,7 @@ Y <- blca_pheno
 # compare sample names between X and Y; they do not match, and are 
 # not even in the same format!
 colnames(X)[1]
-Y$submitter_id.samples[1]
+Y$sample[1] # Updated 8/15/2025
 
 # 'change '.' to '-' so sample ID format is consistent
 colnames(X) <- gsub('\\.', '-', colnames(X))
@@ -112,19 +131,20 @@ X <- X[,g]
 # intersect(a,b) to return a vector containing the elements common
 # to vectors 'a' and 'b'
 
-common_samples <- intersect(colnames(X), Y$submitter_id.samples)
+# 8/15/2025 - use Y$ssample instead of Y$submitter_id.samples
+common_samples <- intersect(colnames(X), Y$sample)
 
 # we then use match(x, t) to get a vector of indices. The value
 # x[i] is the index of 't' containing the i^th value of 'x'
 
 mx <- match(common_samples, colnames(X))
-my <- match(common_samples, Y$submitter_id.samples)
+my <- match(common_samples, Y$sample)
 
 X <- X[,mx]
 Y <- Y[my,]
 
 # Make sure that the samples match -- if they don't, this will produce an error
-stopifnot(all(colnames(X) == Y$submitter_id.samples))
+stopifnot(all(colnames(X) == Y$sample))
 
 # We now have count data for 405 bladder cancer tumor
 # samples and the corresponding clinical information
