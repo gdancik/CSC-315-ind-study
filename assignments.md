@@ -24,7 +24,7 @@ exclude_from_nav: false
 * [Lab #3]({{ site.baseurl }}/data/hw/Lab3.R) 
 <hr style = "margin-top:-10px">
 * [Lab #4]({{ site.baseurl }}/data/hw/Lab4.R) 
-* [Lab #5]({{ site.baseurl }}/data/hw/Lab5.R) 
+* [Lab #5]({{ site.baseurl }}/data/hw/Lab5.R) (not collected) 
 * [Lab #6]({{ site.baseurl }}/data/hw/Lab6.R)
 * [Lab #7]({{ site.baseurl }}/data/hw/Lab7.R) 
 <hr style = "margin-top:-10px">
