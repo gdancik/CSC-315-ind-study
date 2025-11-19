@@ -67,7 +67,7 @@ X <- X[,-1]  # remove the probe name column
 probeMap <- blca_counts$gencode.v22.annotation.gene.probeMap
 
 # Y = pheno data
-Y <- blca_pheno
+Y <- blca_pheno$TCGA.BLCA.GDC_phenotype.tsv.gz
 
 # 'change '.' to '-' so sample ID format is consistent
 colnames(X) <- gsub('\\.', '-', colnames(X))
