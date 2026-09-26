@@ -92,7 +92,7 @@ drinker <- factor(survey$Alcohol > 0, labels = c('non-drinker', 'drinker'))
 
 # 5) Calculate the correlation and describe the association between 
 #    HS and College GPA, using the language given by the following site:
-#    https://www.dummies.com/education/math/statistics/how-to-interpret-a-correlation-coefficient-r/
+#    https://www.dummies.com/article/academics-the-arts/math/statistics/how-to-interpret-a-correlation-coefficient-r-169792/
 #    Based on these results, is HS GPA a good predictor of College GPA
 #    in this class?
 
