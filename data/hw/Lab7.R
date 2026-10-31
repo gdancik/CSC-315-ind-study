@@ -83,7 +83,7 @@ survey <- read_csv('https://gdancik.github.io/CSC-315/data/datasets/csc315_surve
 ##########################################################################
 
 ##########################################################################
-# 3:  Find the p-values associated with the following t test 
+# 3)  Find the p-values associated with the following t test 
 # statistics, for a one-sample t-test, and state whether you would reject 
 # or fail to reject the null hypothesis at alpha = 0.05:
 
